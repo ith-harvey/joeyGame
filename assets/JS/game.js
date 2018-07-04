@@ -1,13 +1,13 @@
 `use strict`;
 
 
-$(".number").on("click", function() {
+//$(".number").on("click", function() {
 
   //do somthing
   
-});
+//});
 
-$("#result").text(result);
+//$("#result").text(result);
 
 
 // swal({
