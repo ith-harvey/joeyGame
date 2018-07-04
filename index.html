@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Star Wars Game</title>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="./assets/CSS/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:700" rel="stylesheet">
+  <body class="background">
+
+    <!-- Nav Bar -->
+    <div class = "row">
+      <nav class="col-lg-12 navbar navbar-expand-lg navbar-light bg-light">
+        <!-- Sign In Dropdown Form -->
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              sign in
+            </button>
+            <form class="dropdown-menu p-3">
+              <div class="form-group">
+                <label for="exampleDropdownFormEmail2">Email address</label>
+                <input type="email" class="form-control" id="exampleDropdownFormEmail2" placeholder="email@example.com">
+              </div>
+              <div class="form-group">
+                <label for="exampleDropdownFormPassword2">Password</label>
+                <input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Password">
+              </div>
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="dropdownCheck2">
+                <label class="form-check-label" for="dropdownCheck2">
+                  Remember me
+                </label>
+              </div>
+              <button type="submit" class="btn btn-primary">Sign in</button>
+            </form>
+          </div>
+        <a class="col-lg-2 navbar-brand fontChange" href="#"><b>Star Wars Game</b> - Adam Chernick</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        <div class="col-lg-6"></div>
+        <div class="col-lg-2 collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="https://github.com/acher249/Word-Guess-Game" target="_blank">Github</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="https://www.linkedin.com/in/adamchernick/" target="_blank">Linkedin</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="http://www.chernickdesign.com/" target="_blank">Portfolio</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="jumbotron">
+              <!-- code here -->
+              <div class="row">
+                  <div class="col-md-3">
+                      <p><b>Pick a Character:</b></p>
+                  </div>
+                </div>
+                <br>
+                <br>
+              <div class="row">
+                <div class="col-md-3">
+                    <a href="https://placeholder.com"><img src="http://via.placeholder.com/150x150"></a>
+                </div>
+                <div class="col-md-3">
+                    <a href="https://placeholder.com"><img src="http://via.placeholder.com/150x150"></a>
+                </div>
+                <div class="col-md-3">
+                    <a href="https://placeholder.com"><img src="http://via.placeholder.com/150x150"></a>
+                </div>
+                <div class="col-md-3">
+                    <a href="https://placeholder.com"><img src="http://via.placeholder.com/150x150"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Footer -->
+      <div class="row container-fluid footer">
+        <div class="col-lg-12">
+          <p class="center"> Adam Chernick 2018</p>
+        </div>
+      </div>
+    
+    <script src="./assets/JS/game.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  </body>
+</html>
