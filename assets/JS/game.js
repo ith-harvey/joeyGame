@@ -1,11 +1,11 @@
 `use strict`;
 
 
-//$(".number").on("click", function() {
+$(".characterOne").on("click", function() {
 
-  //do somthing
+  console.log("This is working");
   
-//});
+});
 
 //$("#result").text(result);
 
