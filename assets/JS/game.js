@@ -7,6 +7,10 @@
   
 // });
 
+// $("p").click(function(){
+//   alert("The paragraph was clicked.");
+// });
+
 //$("#result").text(result);
 
 

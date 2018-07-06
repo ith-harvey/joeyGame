@@ -16,13 +16,32 @@ body {
     margin-left: auto;
 }
 
+.bg-light {
+    background-color: #edf0f2!important;
+}
+
+.bottom-margin {
+    margin-bottom: 20px;
+}
+
 .jumbotron {
     opacity: 0.8;
+    padding: 0px;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
 }
 
 /* This is for the DropDown */
 .p-3 {
     width: 320px;
+}
+
+p {
+    margin-bottom: 0px;
 }
 
 .navbar-brand {
@@ -80,22 +99,15 @@ body {
     padding-left: 0px;
   }
   
-  .left {
-    float: left;
+  .right {
+    float: center;
     position: relative;
     width: 50%;
+    margin-left: 25%;
     height: 100%;
   }
   
-  .right {
-    float: left;
-    position: relative;
-    width: 40%;
-    margin-left: 5%;
-    height: 100%;
-  }
-  
-  #display {
+  /* #display {
     background: #2d2d2d;
     border: 10px solid #000000;
     border-radius: 5px;
@@ -107,13 +119,13 @@ body {
     padding: 1em;
     display:table-cell;
     vertical-align:middle;
-  }
+  } */
   
   #drag-elements {
     display: block;
-    background-color: #dfdfdf;
-    border-radius: 5px;
-    min-height: 150px;
+    background-color: #edf0f2;
+    border-radius: 150px;
+    min-height: 125px;
     margin: 0 auto;
     padding: 2em;
   }
@@ -122,10 +134,11 @@ body {
     text-align: center;
     float: left;
     padding: 1em;
-    margin: 0 1em 1em 0;
+    margin-right: 15px;
+    margin-left: 15px
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
-    border-radius: 100px;
-    border: 2px solid #ececec;
+    border-radius: 150px;
+    border: 4px solid #d8d8d8;
     background: #F7F7F7;
     transition: all .5s ease;
   }
@@ -144,8 +157,8 @@ body {
   
   #drop-target {
     border: 2px dashed #D9D9D9;
-    border-radius: 5px;
-    min-height: 150px;
+    border-radius: 150px;
+    min-height: 125px;
     margin: 0 auto;
     margin-top: 10px;
     padding: 2em;
@@ -160,7 +173,7 @@ body {
     padding: 1em;
     margin: 0 1em 1em 0;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
-    border-radius: 5px;
+    border-radius: 150px;
     border: 2px solid skyblue;
     background: #F7F7F7;
     transition: all .5s ease;
@@ -228,3 +241,17 @@ body {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
     filter: alpha(opacity=50);
   }
+
+  /* Use this class to make grab hand icon */
+    .grab {
+        cursor: move;
+        cursor: grab;
+        cursor: -moz-grab;
+        cursor: -webkit-grab;
+    }
+
+    .grab:active {
+        cursor: grabbing;
+        cursor: -moz-grabbing;
+        cursor: -webkit-grabbing;
+    }
