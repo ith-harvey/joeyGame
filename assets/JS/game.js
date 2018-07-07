@@ -25,7 +25,7 @@ function $(id) {
   return document.getElementById(id);
 }
 
-dragula([$('drag-elements'), $('drop-target')], {
+dragula([$('drag-elements'), $('drop-target'), $('drop-target2'), $('drop-target3')], {
   revertOnSpill: true
 }).on('drop', function(el) {
   if ($('drop-target').children.length > 0) {

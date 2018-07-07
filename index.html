@@ -41,7 +41,7 @@
               <button type="submit" class="btn btn-primary">Sign in</button>
             </form>
           </div>
-        <a class="col-lg-2 navbar-brand fontChange" href="#"><b>Star Wars Game</b> - Adam Chernick</a>
+        <a class="col-lg-2 navbar-brand fontChange" href="#"><b>Dragging Game</b> - Adam Chernick</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -64,96 +64,109 @@
 
       <!-- Dragula -->
       <div class="row">
-          <div class="col-md-12">
-            <div class="container">
-              <div class="right">
-                <div id="drag-elements">
-                  <!-- CharacterOne *********************************** -->
-                  <div class="grab noselect">
-                    <div class="row">
-                      <div class="col-md-12 fontChange">
-                        <p>Character Name</p>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-12 characterOne">
-                          <img src="./assets/images/1.png">
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-12 fontChange">
-                        <p>Health</p>
-                      </div>
+        <div class="col-md-12">
+          <div class="container">
+            <div class="left">
+              <div id="drag-elements">
+                <!-- CharacterOne *********************************** -->
+                <div class="grab noselect">
+                  <div class="row">
+                    <div class="col-md-12 fontChange">
+                      <p>Character Name</p>
                     </div>
                   </div>
-
-                  <!-- CharacterTwo ************************************ -->
-                  <div class="grab noselect">
-                    <div class="row">
-                      <div class="col-md-12 fontChange">
-                        <p>Character Name</p>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-12 characterOne">
-                          <img src="./assets/images/2.png">
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-12 fontChange">
-                        <p>Health</p>
-                      </div>
+                  <div class="row">
+                    <div class="col-md-12 characterOne">
+                        <img src="./assets/images/1.png">
                     </div>
                   </div>
-
-                  <!-- CharacterThree ************************************ -->
-                  <div class="grab noselect">
-                    <div class="row">
-                      <div class="col-md-12 fontChange">
-                        <p>Character Name</p>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-12 characterOne">
-                          <img src="./assets/images/3.png">
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-12 fontChange">
-                        <p>Health</p>
-                      </div>
+                  <div class="row">
+                    <div class="col-md-12 fontChange">
+                      <p>Health</p>
                     </div>
                   </div>
-
-                  <!-- CharacterFour ************************************ -->
-                  <div class="grab noselect">
-                      <div class="row">
-                        <div class="col-md-12 fontChange">
-                          <p>Character Name</p>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-md-12 characterOne">
-                            <img src="./assets/images/4.png">
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-md-12 fontChange">
-                          <p>Health</p>
-                        </div>
-                      </div>
-                    </div>
                 </div>
 
-                <div id="drop-target">
+                <!-- CharacterTwo ************************************ -->
+                <div class="grab noselect">
+                  <div class="row">
+                    <div class="col-md-12 fontChange">
+                      <p>Character Name</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12 characterOne">
+                        <img src="./assets/images/2.png">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12 fontChange">
+                      <p>Health</p>
+                    </div>
+                  </div>
                 </div>
-                <!-- Use Display to show Traits of Players -->
-                <!-- <div class="right">
-                  <div id="display">Display</div>
-                </div> -->
+
+                <!-- CharacterThree ************************************ -->
+                <div class="grab noselect">
+                  <div class="row">
+                    <div class="col-md-12 fontChange">
+                      <p>Character Name</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12 characterOne">
+                        <img src="./assets/images/3.png">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12 fontChange">
+                      <p>Health</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- CharacterFour ************************************ -->
+                <div class="grab noselect">
+                  <div class="row">
+                    <div class="col-md-12 fontChange">
+                      <p>Character Name</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12 characterOne">
+                        <img src="./assets/images/4.png">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12 fontChange">
+                      <p>Health</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Drop Target -->
+              <div id="drop-target">
+
+              </div>
+
+              <!-- Use Display to show Traits of Players -->
+              <!-- <div class="right">
+                <div id="display">Display</div>
+              </div> -->
+          </div>
+
+          <!-- Right Drop Zones -->
+          <div class="right">
+            <div id="drop-target2">
+
+            </div>
+            <div id="drop-target3">
+
             </div>
           </div>
         </div>
+      </div>
 
       <!-- Footer -->
       <div class="row container-fluid footer">
@@ -179,6 +192,7 @@
             });
           });
 
+          // *******************************************************//
           //Use Objects: to hold character data.
           var ObiWan = {
             Name: "ObiWan",
@@ -207,8 +221,6 @@
           console.log(ObiWan.Name);
 
         });
-      
-      
       </script>
 
 
