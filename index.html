@@ -162,6 +162,7 @@
 
                 <div id="drop-target">
                 </div>
+                <!-- Use Display to show Traits of Players -->
                 <!-- <div class="right">
                   <div id="display">Display</div>
                 </div> -->
@@ -175,6 +176,55 @@
           <p class="center"> Adam Chernick 2018</p>
         </div>
       </div>
+
+
+      <!-- JS -->
+      <!-- Not sure why Jquery is not working when linked in. -->
+      <script type="text/javascript">
+      
+        $(document).ready(function() {
+
+          $(".grab").on("click", function() {
+          console.log("This is working");
+            swal({
+              title: "YOU WIN!",
+              icon: "success",
+              text: "This is subtext!",
+              button: "Good Work", 
+            });
+          });
+
+          //Use Objects: to hold character data.
+          var ObiWan = {
+            Name: "ObiWan",
+            Health: 100,
+            AttackPower: 80,
+            CounterAttackPower: 20,
+
+            Attack: function(/*other chracter*/) {
+              
+              //Code to attack other character
+              //Decrease OtherCharacter.Health by this.AttackPower
+              //Decrease this.Heath by OtherCharacter.CounterAttackPower
+              //Decrease this.Heath by OtherCharacter.AttackPower
+              //Decrese OtherCharacter.Health by this.CounterAttackPower
+
+              //link to HTML from inside the object?
+              
+            }
+          };
+
+          // Check if Other character.health is greater than 0 if not, dead.
+          // Next opponenet..
+
+          //Call the function inside
+          //ObiWan.Attack(other character);
+          console.log(ObiWan.Name);
+
+        });
+      
+      
+      </script>
 
 
     <link rel="stylesheet" type="text/css" href="./assets/dist/dragula.css">
