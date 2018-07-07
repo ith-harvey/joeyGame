@@ -33,5 +33,4 @@ dragula([$('drag-elements'), $('drop-target'), $('drop-target2'), $('drop-target
   } else {
     $('display').innerHTML = "Display";
   }
-
 });

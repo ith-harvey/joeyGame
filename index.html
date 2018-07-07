@@ -68,7 +68,7 @@
           <div class="container">
             <div class="left">
               <!-- Change this text with JS when there are less than 4 children -->
-              <p class = "textAlignLeft">Chose a Character:</p>
+              <p class = "textAlignLeft changeText">Chose a Character:</p>
               <div id="drag-elements">
                 <!-- CharacterOne *********************************** -->
                 <div class="grab noselect">
@@ -150,7 +150,6 @@
 
               <!-- Drop Target -->
               <div>
-                  <!-- switch this text to "Enemies" After there are less than 4 children -->
                   <p class = "textAlignLeft">Dead Characters:</p>
                   <div id="drop-target">
 
@@ -206,8 +205,18 @@
               icon: "success",
               text: "This is subtext!",
               button: "Good Work", 
-            });
+            });  
+            if ($(".drag-elements").children().length < 4) {
+              $(".changeText").text("Enemies");
+            } 
           });
+          
+          // find if html has contents..
+          // this is only called on start? on event
+          // if ($(".drag-elements").children().length < 4) {
+          //   $(".changeText").text("Enemies");
+          // }                                         
+          
 
           // *******************************************************//
           //Use Objects: to hold character data.
