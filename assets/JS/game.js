@@ -4,18 +4,6 @@ function $(id) {
   return document.getElementById(id);
 }
 
-function welcomeAlert() {
-  swal({
-    title: "Get Ready To Battle",
-    icon: "error",
-    text: "Choose Your Champion!",
-    button: "Continue", 
-  });  
-}
-
-setTimeout(welcomeAlert, 1);
-
-
 var pickedChampion = false;
 var pickedOpponent = false;
 
@@ -27,6 +15,13 @@ var opponent;
 var dropZone3 = $("drop-target3");
 dropZone3.style.display = "none";
 
+//  BUG: Saying that the div is null
+// var ArrowTop = $(".centerArrowTop");
+// var ArrowBot = $(".centerArrowBot");
+// ArrowBot.style.display = "none";
+// $(".centerArrowBot").children().attr("disabled","disabled");
+
+
 dragula([$('drag-elements'), $('drop-target2'), $('drop-target3')], {
   revertOnSpill: true
 }).on('drop', function(el) {
@@ -35,6 +30,10 @@ dragula([$('drag-elements'), $('drop-target2'), $('drop-target3')], {
 
   if ($('drag-elements').hasChildNodes = true && pickedChampion == false) {
 
+    console.log("Picked Champion");
+    setTimeout(pickedChampionFn, 300);
+    pickedChampion = true;
+
     //Link choice to JS Object
     if($('character').innerHTML == "ObiWan") {
       console.log("champion is ObiWan");
@@ -42,15 +41,13 @@ dragula([$('drag-elements'), $('drop-target2'), $('drop-target3')], {
       //Need to figure out how to link choice to object
       champion = ObiWan;
     }
-
-    console.log("Picked Champion");
-    setTimeout(pickedChampionFn, 100);
-    pickedChampion = true;
-
     $(".changeText").text("Enemies");
     //turn on drop zone 3
     dropZone3.style.display = "block";
+    // ArrowBot.style.display = "block";
+    // ArrowTop.style.display = "none";
     //turn background red
+
   }
   
  // Drop Zone 3 

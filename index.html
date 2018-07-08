@@ -164,17 +164,17 @@
           </div>
 
           <!-- Arrows -->
-          <center class="centerArrow">
-            <div id="drop-targetArrow">
-                <img class="arrowImage" src="./assets/images/arrow.png">
+          <center class="centerArrowTop">
+            <div id="drop-targetArrowTop">
+                <img class="arrowImageTop" src="./assets/images/arrow.png">
             </div>
           </center>
           
-          <center class="centerArrowBot">
-            <div id="drop-targetArrow">
+          <!-- <center class="centerArrowBot">
+            <div id="drop-targetArrowBot">
                 <img class="arrowImageBot" src="./assets/images/arrow.png">
             </div>
-          </center>
+          </center> -->
           
           
 
@@ -213,6 +213,18 @@
       <script type="text/javascript">
       
         $(document).ready(function() {
+
+          function welcomeAlert() {
+            console.log("swal");
+            swal({
+              title: "Get Ready To Battle",
+              icon: "error",
+              text: "Choose Your Champion!",
+              button: "Continue", 
+            });  
+          }
+
+          setTimeout(welcomeAlert, 1);
 
           // $(".grab").on("click", function() {
           // console.log("This is working");
