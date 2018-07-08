@@ -71,7 +71,7 @@
               <p class = "textAlignLeft changeText">Chose a Character:</p>
               <div id="drag-elements">
                 <!-- CharacterOne *********************************** -->
-                <div class="grab noselect">
+                <div class="grab noselect"> 
                   <div class="row">
                     <div class="col-md-12 fontChange">
                       <p>Character Name</p>
@@ -93,7 +93,7 @@
                 <div class="grab noselect">
                   <div class="row">
                     <div class="col-md-12 fontChange">
-                      <p>Character Name</p>
+                      <p id = "character">Character Name</p>
                     </div>
                   </div>
                   <div class="row">
@@ -112,7 +112,7 @@
                 <div class="grab noselect">
                   <div class="row">
                     <div class="col-md-12 fontChange">
-                      <p>Character Name</p>
+                      <p id = "character">Character Name</p>
                     </div>
                   </div>
                   <div class="row">
@@ -131,7 +131,7 @@
                 <div class="grab noselect">
                   <div class="row">
                     <div class="col-md-12 fontChange">
-                      <p>Character Name</p>
+                      <p id = "character">Character Name</p>
                     </div>
                   </div>
                   <div class="row">
@@ -159,10 +159,26 @@
 
               <!-- Use Display to show Traits of Players -->
               <!-- <div class="right">
-                <div id="display">Display</div>
-              </div> -->
+                <div id="display">Display</div> -->
+            </div>
           </div>
 
+          <!-- Arrows -->
+          <center class="centerArrow">
+            <div id="drop-targetArrow">
+                <img class="arrowImage" src="./assets/images/arrow.png">
+            </div>
+          </center>
+          
+          <center class="centerArrowBot">
+            <div id="drop-targetArrow">
+                <img class="arrowImageBot" src="./assets/images/arrow.png">
+            </div>
+          </center>
+          
+          
+
+          
           <!-- Right Drop Zones -->
           <div class="right">
             <div>
@@ -198,25 +214,15 @@
       
         $(document).ready(function() {
 
-          $(".grab").on("click", function() {
-          console.log("This is working");
-            swal({
-              title: "YOU WIN!",
-              icon: "success",
-              text: "This is subtext!",
-              button: "Good Work", 
-            });  
-            if ($(".drag-elements").children().length < 4) {
-              $(".changeText").text("Enemies");
-            } 
-          });
-          
-          // find if html has contents..
-          // this is only called on start? on event
-          // if ($(".drag-elements").children().length < 4) {
-          //   $(".changeText").text("Enemies");
-          // }                                         
-          
+          // $(".grab").on("click", function() {
+          // console.log("This is working");
+          //   swal({
+          //     title: "YOU WIN!",
+          //     icon: "success",
+          //     text: "This is subtext!",
+          //     button: "Good Work", 
+          //   });  
+          // });
 
           // *******************************************************//
           //Use Objects: to hold character data.
@@ -244,7 +250,7 @@
 
           //Call the function inside
           //ObiWan.Attack(other character);
-          console.log(ObiWan.Name);
+          //console.log(ObiWan.Name);
 
         });
       </script>
