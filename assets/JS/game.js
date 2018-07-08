@@ -47,7 +47,7 @@ dragula([$('drag-elements'), $('drop-target2'), $('drop-target3')], {
     // ArrowBot.style.display = "block";
     // ArrowTop.style.display = "none";
     //turn background red
-
+    document.getElementById("drag-elements").style.backgroundColor = "#eda1a1";
   }
   
  // Drop Zone 3 
@@ -73,7 +73,7 @@ function pickedOpponentFn() {
   pickedOpponent = true;
   swal({
         title: "You Picked Your First Opponent",
-        icon: "success",
+        icon: "info",
         text: "Now you need to fight him!",
         button: "Continue", 
       });  
