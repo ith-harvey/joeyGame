@@ -28,10 +28,25 @@ dragula([$('drag-elements'), $('drop-target2'), $('drop-target3')], {
 
   // console.log("Drop is working");
 
-  if ($('drag-elements').hasChildNodes = true && pickedChampion == false) {
+  // Drop Zone 3 // this if must come first so that picked champ is not true when it hits it
+  if ($('drop-target3').hasChildNodes = true && pickedChampion == true) {
+
+    console.log("Picked Opponent");
+    setTimeout(pickedOpponentFn, 1);
+
+    // after opponent dies make sure that we remove inactive class 
+    //so that a new opponent
+    document.getElementById("drop-target3").classList.add("inactiveLink");
+
+    //Also make enemies inactive until first opponent is dead..
+    document.getElementById("drag-elements").classList.add("inactiveLink");
+  }  
+
+  // ** 
+  if (pickedChampion == false) {
 
     console.log("Picked Champion");
-    setTimeout(pickedChampionFn, 300);
+    setTimeout(pickedChampionFn, 1);
     pickedChampion = true;
 
     //Link choice to JS Object
@@ -47,19 +62,13 @@ dragula([$('drag-elements'), $('drop-target2'), $('drop-target3')], {
 
     // want to just make the margin top larger.. but can't grab it .. says null
     // document.getElementsById("drop-targetArrowTop").style.margin-top = someNumber;
+
     // turn background red
     document.getElementById("drag-elements").style.backgroundColor = "#eda1a1";
 
-    //animation
-    // myMove();
+    // This makes
+    document.getElementById("drop-target2").classList.add("inactiveLink");
   }
-  
- // Drop Zone 3 
-  if ($('drop-target3').hasChildNodes = true && pickedChampion == true) {
-
-    console.log("Picked Opponent");
-    setTimeout(pickedOpponentFn, 1);
-  }  
 });
 
 
@@ -82,18 +91,3 @@ function pickedOpponentFn() {
         button: "Continue", 
       });  
 }
-
-// function myMove() {
-//   var elem = document.getElementById("arrowImageTop");   
-//   var pos = 0;
-//   var id = setInterval(frame, 10);
-//   function frame() {
-//     if (pos == 350) {
-//       clearInterval(id);
-//     } else {
-//       pos++; 
-//       //can't animate because still getting null style
-//       elem.style.top = pos + 'px';
-//     }
-//   }
-// }
