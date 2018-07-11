@@ -1,8 +1,15 @@
 `use strict`;
 
-function $(id) {
-  return document.getElementById(id);
-}
+
+$( document ).ready(function() {
+    console.log( "ready!" );
+
+    // -- this is fucking everything up --
+    // function $(id) {
+    //   return document.getElementById(id);
+    // }
+
+
 
 var pickedChampion = false;
 var pickedOpponent = false;
@@ -12,41 +19,44 @@ var champion;
 var opponent;
 
 //turn off drop zone 3
-var dropZone3 = $("drop-target3");
-dropZone3.style.display = "none";
+var dropZone3 = $('#drop-target3');
+dropZone3.css("display", "none");
 
 
-
-dragula([$('drag-elements'), $('drop-target2'), $('drop-target3')], {
+dragula([document.getElementById('drag-elements'), document.getElementById('drop-target2'), document.getElementById('drop-target3')], {
   revertOnSpill: true
-}).on('drop', function(el) {
+})
 
-  // console.log("Drop is working");
+.on('drop', function (el) {
+
+  console.log("Drop is working");
 
   // Drop Zone 3 // this if must come first so that picked champ is not true when it hits it
-  if ($('drop-target3').hasChildNodes = true && pickedChampion == true) {
+
+  if ($('#drop-target3').hasChildNodes = true && pickedChampion == true) {
 
     console.log("Picked Opponent");
     setTimeout(pickedOpponentFn, 1);
 
-    // after opponent dies make sure that we remove inactive class 
+    // after opponent dies make sure that we remove inactive class
     //so that a new opponent
-    document.getElementById("drop-target3").classList.add("inactiveLink");
+    document.getElementById('drop-target3').classList.add("inactiveLink");
 
     //Also make enemies inactive until first opponent is dead..
-    document.getElementById("drag-elements").classList.add("inactiveLink");
-  }  
+    document.getElementById('drag-elements').classList.add("inactiveLink");
+  }
 
-  // ** 
+  // **
   if (pickedChampion == false) {
 
     console.log("Picked Champion");
     setTimeout(pickedChampionFn, 1);
     pickedChampion = true;
 
-    $(".changeText").text("Enemies");
+    $('.changeText').text("Enemies");
     //turn on drop zone 3
-    dropZone3.style.display = "block";
+
+    dropZone3.css("display", "block");
 
     // want to just make the margin top larger.. but can't grab it .. says null
     // document.getElementsById("drop-targetArrowTop").style.margin-top = someNumber;
@@ -66,8 +76,8 @@ function pickedChampionFn() {
         title: "You Picked Your Champion",
         icon: "info",
         text: "Now pick your first opponent!",
-        button: "Continue", 
-      });  
+        button: "Continue",
+      });
 }
 
 function pickedOpponentFn() {
@@ -76,8 +86,8 @@ function pickedOpponentFn() {
         title: "You Picked Your First Opponent",
         icon: "info",
         text: "Now you need to fight him!",
-        button: "Continue", 
-      });  
+        button: "Continue",
+      });
 }
 
 //************************************************** */
@@ -98,7 +108,7 @@ var ObiWan = {
   },
 
   // Attack: function(/*other chracter*/) {
-    
+
   //   //Code to attack other character
   //   //Decrease OtherCharacter.Health by this.AttackPower
   //   //Decrease this.Heath by OtherCharacter.CounterAttackPower
@@ -123,7 +133,7 @@ var LukeSkywalker = {
   },
 
   // Attack: function(/*other chracter*/) {
-    
+
   //   //Code to attack other character
   //   //Decrease OtherCharacter.Health by this.AttackPower
   //   //Decrease this.Heath by OtherCharacter.CounterAttackPower
@@ -131,7 +141,7 @@ var LukeSkywalker = {
   //   //Decrese OtherCharacter.Health by this.CounterAttackPower
 
   //   //link to HTML from inside the object?
-    
+
   // }
 };
 
@@ -147,7 +157,7 @@ var DarthVadar = {
   },
 
   // Attack: function(/*other chracter*/) {
-    
+
   //   //Code to attack other character
   //   //Decrease OtherCharacter.Health by this.AttackPower
   //   //Decrease this.Heath by OtherCharacter.CounterAttackPower
@@ -155,7 +165,7 @@ var DarthVadar = {
   //   //Decrese OtherCharacter.Health by this.CounterAttackPower
 
   //   //link to HTML from inside the object?
-    
+
   // }
 };
 
@@ -171,7 +181,7 @@ var DarthMal = {
   },
 
   // Attack: function(/*other chracter*/) {
-    
+
   //   //Code to attack other character
   //   //Decrease OtherCharacter.Health by this.AttackPower
   //   //Decrease this.Heath by OtherCharacter.CounterAttackPower
@@ -179,7 +189,7 @@ var DarthMal = {
   //   //Decrese OtherCharacter.Health by this.CounterAttackPower
 
   //   //link to HTML from inside the object?
-    
+
   // }
 };
 
@@ -205,7 +215,7 @@ DarthMal.ConnectObjToHTML();
 function Attack(){
 
   //****************************************/
-  //I am trying to find which character was dropped in Drop Zone 2 by finding if they are a 
+  //I am trying to find which character was dropped in Drop Zone 2 by finding if they are a
   // child to the new Drop Zone 2 parent div.. Then I can find which character was dropped in Zone3
   // then I can have them fight. But I cant have them fight until I know who is fighting who.
 
@@ -232,6 +242,8 @@ function Attack(){
 }
 
 Attack();
+
+});
 
 
 // Check if Other character.health is greater than 0 if not, dead.
