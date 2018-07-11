@@ -16,18 +16,6 @@ var dropZone3 = $("drop-target3");
 dropZone3.style.display = "none";
 
 
-//on start
-function welcomeAlert() {
-  swal({
-    title: "Get Ready To Battle",
-    icon: "error",
-    text: "Choose Your Champion!",
-    button: "Continue", 
-  });  
-}
-
-setTimeout(welcomeAlert, 1);
-
 
 dragula([$('drag-elements'), $('drop-target2'), $('drop-target3')], {
   revertOnSpill: true
@@ -56,13 +44,6 @@ dragula([$('drag-elements'), $('drop-target2'), $('drop-target3')], {
     setTimeout(pickedChampionFn, 1);
     pickedChampion = true;
 
-    //Link choice to JS Object
-    if($('character').innerHTML == "ObiWan") {
-      console.log("champion is ObiWan");
-
-      //Need to figure out how to link choice to object
-      champion = ObiWan;
-    }
     $(".changeText").text("Enemies");
     //turn on drop zone 3
     dropZone3.style.display = "block";
@@ -104,88 +85,154 @@ function pickedOpponentFn() {
 //************************************************** */
 
 //put this inside object... tie it all together
-var ObiWanHealth = document.getElementById("ObiWanHealth");
-
-console.log(ObiWanHealth);
 
 var ObiWan = {
-  Name: "ObiWan",
-  Physical: ObiWanHealth,
-  Health: 100,
-  AttackPower: 75,
-  CounterAttackPower: 20,
+  name: "ObiWan",
+  health: 100,
+  attackPower: 75,
+  counterAttackPower: 20,
 
-  Attack: function(/*other chracter*/) {
-    
-    //Code to attack other character
-    //Decrease OtherCharacter.Health by this.AttackPower
-    //Decrease this.Heath by OtherCharacter.CounterAttackPower
-    //Decrease this.Heath by OtherCharacter.AttackPower
-    //Decrese OtherCharacter.Health by this.CounterAttackPower
+  ConnectObjToHTML: function (){
+    var obiwanHealthID = document.getElementById("ObiWanHealthID");
+    obiwanHealthID.textContent = "Health: " + this.health;
+  },
 
-    //link to HTML from inside the object?
+  // Attack: function(/*other chracter*/) {
     
-  }
+  //   //Code to attack other character
+  //   //Decrease OtherCharacter.Health by this.AttackPower
+  //   //Decrease this.Heath by OtherCharacter.CounterAttackPower
+  //   //Decrease this.Heath by OtherCharacter.AttackPower
+  //   //Decrese OtherCharacter.Health by this.CounterAttackPower
+
+  //   //link to HTML from inside the object?
+  // }
 };
 
 console.log(ObiWan);
 
 var LukeSkywalker = {
-  Name: "LukeSkywalker",
-  Health: 100,
-  AttackPower: 80,
-  CounterAttackPower: 25,
+  name: "LukeSkywalker",
+  health: 100,
+  attackPower: 80,
+  counterAttackPower: 25,
 
-  Attack: function(/*other chracter*/) {
-    
-    //Code to attack other character
-    //Decrease OtherCharacter.Health by this.AttackPower
-    //Decrease this.Heath by OtherCharacter.CounterAttackPower
-    //Decrease this.Heath by OtherCharacter.AttackPower
-    //Decrese OtherCharacter.Health by this.CounterAttackPower
+  ConnectObjToHTML: function (){
+    var LukeHealthID = document.getElementById("LukeHealthID");
+    LukeHealthID.textContent = "Health: " + this.health;
+  },
 
-    //link to HTML from inside the object?
+  // Attack: function(/*other chracter*/) {
     
-  }
+  //   //Code to attack other character
+  //   //Decrease OtherCharacter.Health by this.AttackPower
+  //   //Decrease this.Heath by OtherCharacter.CounterAttackPower
+  //   //Decrease this.Heath by OtherCharacter.AttackPower
+  //   //Decrese OtherCharacter.Health by this.CounterAttackPower
+
+  //   //link to HTML from inside the object?
+    
+  // }
 };
 
 var DarthVadar = {
-  Name: "DarthVadar",
-  Health: 100,
-  AttackPower: 60,
-  CounterAttackPower: 15,
+  name: "DarthVadar",
+  health: 100,
+  attackPower: 60,
+  counterAttackPower: 15,
 
-  Attack: function(/*other chracter*/) {
-    
-    //Code to attack other character
-    //Decrease OtherCharacter.Health by this.AttackPower
-    //Decrease this.Heath by OtherCharacter.CounterAttackPower
-    //Decrease this.Heath by OtherCharacter.AttackPower
-    //Decrese OtherCharacter.Health by this.CounterAttackPower
+  ConnectObjToHTML: function (){
+    var VadarHealthID = document.getElementById("VadarHealthID");
+    VadarHealthID.textContent = "Health: " + this.health;
+  },
 
-    //link to HTML from inside the object?
+  // Attack: function(/*other chracter*/) {
     
-  }
+  //   //Code to attack other character
+  //   //Decrease OtherCharacter.Health by this.AttackPower
+  //   //Decrease this.Heath by OtherCharacter.CounterAttackPower
+  //   //Decrease this.Heath by OtherCharacter.AttackPower
+  //   //Decrese OtherCharacter.Health by this.CounterAttackPower
+
+  //   //link to HTML from inside the object?
+    
+  // }
 };
 
 var DarthMal = {
-  Name: "DarthMal",
-  Health: 100,
-  AttackPower: 70,
-  CounterAttackPower: 12,
+  name: "DarthMal",
+  health: 100,
+  attackPower: 70,
+  counterAttackPower: 12,
 
-  Attack: function(/*other chracter*/) {
-    
-    //Code to attack other character
-    //Decrease OtherCharacter.Health by this.AttackPower
-    //Decrease this.Heath by OtherCharacter.CounterAttackPower
-    //Decrease this.Heath by OtherCharacter.AttackPower
-    //Decrese OtherCharacter.Health by this.CounterAttackPower
+  ConnectObjToHTML: function (){
+    var MalHealthID = document.getElementById("MalHealthID");
+    MalHealthID.textContent = "Health: " + this.health;
+  },
 
-    //link to HTML from inside the object?
+  // Attack: function(/*other chracter*/) {
     
-  }
+  //   //Code to attack other character
+  //   //Decrease OtherCharacter.Health by this.AttackPower
+  //   //Decrease this.Heath by OtherCharacter.CounterAttackPower
+  //   //Decrease this.Heath by OtherCharacter.AttackPower
+  //   //Decrese OtherCharacter.Health by this.CounterAttackPower
+
+  //   //link to HTML from inside the object?
+    
+  // }
 };
+
+//Connect objects to HTML Health Divs
+ObiWan.ConnectObjToHTML();
+LukeSkywalker.ConnectObjToHTML();
+DarthVadar.ConnectObjToHTML();
+DarthMal.ConnectObjToHTML();
+
+//Figure out Attacking:
+// find what character object is in Drop Zone 2 == champion
+// find what character is in Drop Zone 3 == Opponent
+// then on click attack
+
+//trying onChange event
+//document.getElementById("ObiWanHealthID").addEventListener("change", Attack);
+
+// .parent is not working..
+// var target = document.getElementById("obiwan");
+// var targetParent = target.parent();
+// console.log(targetParent);
+
+function Attack(){
+
+  //****************************************/
+  //I am trying to find which character was dropped in Drop Zone 2 by finding if they are a 
+  // child to the new Drop Zone 2 parent div.. Then I can find which character was dropped in Zone3
+  // then I can have them fight. But I cant have them fight until I know who is fighting who.
+
+  // If the drop zone 2 div contains the obiwan health div
+  // then you have chosen ObiWan .. repeat for other characters..
+  var dropZone2 = document.getElementById("drop-target2");
+  var ObiWanHealthID = document.getElementById("ObiWanHealthID");
+  console.log("dropzone2: : " + dropZone2);
+  console.log("ObiWan Health ID: " + ObiWanHealthID);
+
+
+  // var target = document.getElementById("obiwan");
+  // var targetParent = target.parent();
+
+  // if($("obiwan").parent("")){
+
+  // }
+
+  if(dropZone2.contains(ObiWanHealthID)){
+    console.log("Your Champion is ObiWan");
+  }
+
+
+}
+
+Attack();
+
 
 // Check if Other character.health is greater than 0 if not, dead.
 // Next opponenet..

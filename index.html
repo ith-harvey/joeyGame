@@ -25,8 +25,8 @@
             <!-- Change this text with JS when there are less than 4 children -->
             <p class = "textAlignLeft changeText">Choose a Character:</p>
             <div id="drag-elements">
-              <!-- CharacterOne *********************************** -->
-              <div class="grab"> 
+              <!-- CharacterOne  //  ObiWan   *********************************** -->
+              <div class="grab" id="obiwan"> 
                 <div class="row">
                   <div class="col-md-12 fontChange">
                     <p>ObiWan</p>
@@ -39,13 +39,13 @@
                 </div>
                 <div class="row">
                   <div class="col-md-12 fontChange">
-                    <p id="ObiWanHealth">Health</p>
+                    <p id="ObiWanHealthID">Health</p>
                   </div>
                 </div>
               </div>
 
-              <!-- CharacterTwo ************************************ -->
-              <div class="grab">
+              <!-- CharacterTwo // Luke Skywalker ************************************ -->
+              <div class="grab" id="luke">
                 <div class="row">
                   <div class="col-md-12 fontChange">
                     <p>Luke Skywalker</p>
@@ -58,16 +58,16 @@
                 </div>
                 <div class="row">
                   <div class="col-md-12 fontChange">
-                    <p>Health</p>
+                    <p id="LukeHealthID">Health</p>
                   </div>
                 </div>
               </div>
 
-              <!-- CharacterThree ************************************ -->
-              <div class="grab">
+              <!-- CharacterThree // Darth Vadar ************************************ -->
+              <div class="grab" id="vadar">
                 <div class="row">
                   <div class="col-md-12 fontChange">
-                    <p>Character Name</p>
+                    <p>Darth Vadar</p>
                   </div>
                 </div>
                 <div class="row">
@@ -77,16 +77,16 @@
                 </div>
                 <div class="row">
                   <div class="col-md-12 fontChange">
-                    <p>Health</p>
+                    <p id="VadarHealthID">Health</p>
                   </div>
                 </div>
               </div>
 
-              <!-- CharacterFour ************************************ -->
-              <div class="grab">
+              <!-- CharacterFour // Darth Mal  ************************************ -->
+              <div class="grab" id="mal">
                 <div class="row">
                   <div class="col-md-12 fontChange">
-                    <p>Character Name</p>
+                    <p>Darth Mal</p>
                   </div>
                 </div>
                 <div class="row">
@@ -96,7 +96,7 @@
                 </div>
                 <div class="row">
                   <div class="col-md-12 fontChange">
-                    <p>Health</p>
+                    <p id="MalHealthID">Health</p>
                   </div>
                 </div>
               </div>
@@ -110,7 +110,6 @@
 
                 </div>
             </div>
-            
 
             <!-- Use Display to show Traits of Players -->
             <!-- <div class="right">
@@ -121,14 +120,7 @@
         <!-- Arrows -->
         <center class="centerArrowTop">
           <div id="drop-targetArrowTop">
-              <img class="arrowImageTop" src="./assets/images/arrow.png">
-          </div>
-        </center>
-
-        <!-- Fight Button  - Needs to be re-positioned -->
-          <center class="centerArrowBot">
-          <div id="drop-targetArrowBot">
-              <button type="button fightButton" class="btn btn-primary">Attack</button>
+            <img class="arrowImageTop" src="./assets/images/arrow.png">
           </div>
         </center>
         
@@ -149,13 +141,32 @@
           <div>
             <p>Drop Your Opponent</p>
             <div id="drop-target3">
-          
 
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    <script type="text/javascript">
+
+      $(document).ready(function() {
+        //on start
+        function welcomeAlert() {
+          swal({
+            title: "Get Ready To Battle",
+            icon: "error",
+            text: "Choose Your Champion!",
+            button: "Continue", 
+          });  
+        }
+
+        setTimeout(welcomeAlert, 1);
+
+      });
+
+    </script>
+      
 
     <!-- Footer -->
     <div class="row container-fluid footer">
