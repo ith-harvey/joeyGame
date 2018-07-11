@@ -15,11 +15,18 @@ var opponent;
 var dropZone3 = $("drop-target3");
 dropZone3.style.display = "none";
 
-//  BUG: Saying that the div is null
-// var ArrowTop = $(".centerArrowTop");
-// var ArrowBot = $(".centerArrowBot");
-// ArrowBot.style.display = "none";
-// $(".centerArrowBot").children().attr("disabled","disabled");
+
+//on start
+function welcomeAlert() {
+  swal({
+    title: "Get Ready To Battle",
+    icon: "error",
+    text: "Choose Your Champion!",
+    button: "Continue", 
+  });  
+}
+
+setTimeout(welcomeAlert, 1);
 
 
 dragula([$('drag-elements'), $('drop-target2'), $('drop-target3')], {
@@ -91,3 +98,98 @@ function pickedOpponentFn() {
         button: "Continue", 
       });  
 }
+
+//************************************************** */
+//Objects//
+//************************************************** */
+
+//put this inside object... tie it all together
+var ObiWanHealth = document.getElementById("ObiWanHealth");
+
+console.log(ObiWanHealth);
+
+var ObiWan = {
+  Name: "ObiWan",
+  Physical: ObiWanHealth,
+  Health: 100,
+  AttackPower: 75,
+  CounterAttackPower: 20,
+
+  Attack: function(/*other chracter*/) {
+    
+    //Code to attack other character
+    //Decrease OtherCharacter.Health by this.AttackPower
+    //Decrease this.Heath by OtherCharacter.CounterAttackPower
+    //Decrease this.Heath by OtherCharacter.AttackPower
+    //Decrese OtherCharacter.Health by this.CounterAttackPower
+
+    //link to HTML from inside the object?
+    
+  }
+};
+
+console.log(ObiWan);
+
+var LukeSkywalker = {
+  Name: "LukeSkywalker",
+  Health: 100,
+  AttackPower: 80,
+  CounterAttackPower: 25,
+
+  Attack: function(/*other chracter*/) {
+    
+    //Code to attack other character
+    //Decrease OtherCharacter.Health by this.AttackPower
+    //Decrease this.Heath by OtherCharacter.CounterAttackPower
+    //Decrease this.Heath by OtherCharacter.AttackPower
+    //Decrese OtherCharacter.Health by this.CounterAttackPower
+
+    //link to HTML from inside the object?
+    
+  }
+};
+
+var DarthVadar = {
+  Name: "DarthVadar",
+  Health: 100,
+  AttackPower: 60,
+  CounterAttackPower: 15,
+
+  Attack: function(/*other chracter*/) {
+    
+    //Code to attack other character
+    //Decrease OtherCharacter.Health by this.AttackPower
+    //Decrease this.Heath by OtherCharacter.CounterAttackPower
+    //Decrease this.Heath by OtherCharacter.AttackPower
+    //Decrese OtherCharacter.Health by this.CounterAttackPower
+
+    //link to HTML from inside the object?
+    
+  }
+};
+
+var DarthMal = {
+  Name: "DarthMal",
+  Health: 100,
+  AttackPower: 70,
+  CounterAttackPower: 12,
+
+  Attack: function(/*other chracter*/) {
+    
+    //Code to attack other character
+    //Decrease OtherCharacter.Health by this.AttackPower
+    //Decrease this.Heath by OtherCharacter.CounterAttackPower
+    //Decrease this.Heath by OtherCharacter.AttackPower
+    //Decrese OtherCharacter.Health by this.CounterAttackPower
+
+    //link to HTML from inside the object?
+    
+  }
+};
+
+// Check if Other character.health is greater than 0 if not, dead.
+// Next opponenet..
+
+//Call the function inside
+//ObiWan.Attack(other character);
+//console.log(ObiWan.Name);

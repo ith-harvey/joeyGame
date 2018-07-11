@@ -22,6 +22,10 @@ body {
     margin-left: auto;
 }
 
+.topBuffer{
+  margin-top: 15px;
+}
+
 .bg-light {
     background-color: #edf0f2!important;
 }
